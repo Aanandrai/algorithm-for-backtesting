@@ -1,0 +1,45 @@
+# 1. We are using selenium to intract with web brower
+# 	Selenium is an open source umbrella project for a range of tools and libraries aimed at supporting browser automation. It provides a playback tool for authoring functional tests across most modern web browsers, without the need to learn a test scripting language
+
+# 2. import the 'time' for working with hours  and minute
+
+# 3. 'algo_test_url' is used for setting the url of "AlgoTest web software" 
+
+# 4. 'start_time' is used for setting the backtest timing
+
+# 5. 'time_increment' is used for setting the time between the windows.
+
+# 6. 'total_tabs' are used for who much tabs you want to open
+
+# 7. 'increment_time' function is used for incrementing the time by specific number of time.
+
+# 8. 'driver = webdriver.Chrome()' is used for Initializing a new instance of the Chrome WebDriver. you can also replace it with other browser's WebDriver.
+
+# 9. 'driver.get(algo_test_url)' Now navigates to AlgoTest web software.
+
+# 10. 'for i in range(total_tabs):' starting the loop taht will iterate 60 times.
+
+# 11. 'if i>0: ' if current iteration is greater the zero it will run. if i==0 it will use previous open tab
+
+# 12. 'driver.execute_script("window.open('');"): ' this means it Uses JavaScript to open a new browser tab.
+
+# 13. 'driver.switch_to.window(driver.window_handles[i]):' it used for Switches the WebDriver's control to the newly opened tab.
+# 14. 'driver.get(algo_test_url):' it Loads the AlgoTest URL in the new tab.
+
+# 15. 'current_time = increment_time(start_time, i * time_increment):' it Calculates the time for the current tab by incrementing the start time by the appropriate number of minutes.
+
+# 16.'time_input= driver.find_element_by_id("time_input_id"):' it Finds the time input element on the page using its ID. Replace "time_input_id" with the actual ID of the time input field.
+
+# 17. 'time_input.clear():' this will Clears any existing value in the time input field.
+
+# 18. 'time_input.send_keys(current_time):' It Enters the new time into the time input field.
+
+# 19. 'start_button = driver.find_element_by_id("start_button_id"):' It Finds the start button element on the page using its ID. Replace "start_button_id" with the actual ID of the start button.
+
+# 20. 'start_button.click():' Clicks the start button to initiate the backtest.
+
+# 21. 'time.sleep(1):' it  Pauses the script for 1 second to allow the new tab to load and process the backtest request.
+
+# 22. 'input("Press Enter to close the browser..."):' It Keeps the script running and the browser open until the user presses Enter.
+
+# 23. 'driver.quit():' IT Close the browser and ends the WebDriver session.

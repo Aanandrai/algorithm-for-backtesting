@@ -1,0 +1,11 @@
+We utilize the AlgoTest web software for our algorithm backtesting, which is currently a time-consuming process. To streamline this, we are seeking a program or code that can automate the opening of 60 tabs, with each tab representing a minute-by-minute backtest.
+
+Specific Requirements:
+- When a strategy is backtested at 9:00 AM, the code should function to open 60 tabs, each with the strategy time incremented by one minute.
+  - Example:
+    - First tab: 9:00 AM
+    - Second tab: 9:01 AM
+    - Third tab: 9:02 AM
+    - Fourth tab: 9:03 AM
+    - Fifth tab: 9:04 AM
+    - & so on..... till 10:00 AM
